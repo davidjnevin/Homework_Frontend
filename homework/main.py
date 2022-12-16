@@ -36,11 +36,12 @@ from datetime import datetime
 from flet.radio import Radio
 
 import requests
-from views import RegisterView, LandingPageView, HealthCheckResultsView
+from views import RegisterView, LandingPageView, HealthCheckResultsView, LoginView
 from utils.register import RegisterService
 from utils.login import LoginService
 from utils.healthcheck import HealthCheckService
 
+from views.views import PageViews as pgvs
 
 from content.home_content import HomeContent
 from content.login_content import LoginContent
@@ -106,7 +107,7 @@ def main(page: Page):
             selected_index=5,
             tabs=[
                 Tab(text="Home", content=home_content),
-                Tab(text="Assignments", content=login_content),
+                Tab(text="Menu2", content=home_content),
                 Tab(text="Menu3", content=home_content),
                 Tab(text="Menu4", content=home_content),
                 Tab(text="Menu5", content=home_content),
@@ -115,6 +116,40 @@ def main(page: Page):
     )
 
     page.add(footer_content)
+
+    def route_change(e):
+        page.views.clear()
+
+        # First View is Login
+        page.views.append(LandingPageView.landing_page_view(page))
+
+        if page.route == "/register":
+            page.views.append(pgvs.register_view(e, page))
+
+        if page.route == "/check_email":
+            page.views.append(pgvs.check_email_view(e, page))
+        if page.route == "/login":
+            page.views.append(LoginView.login_view(e, page))
+
+        # Main App View for Learners
+        if page.route == "/learner":
+            page.views.append(pgvs.learner_view(e, page))
+        page.update()
+
+        # Main App View for Guardians
+        if page.route == "/guardian":
+            page.views.append(pgvs.guardian_view(e, page))
+        page.update()
+
+    def view_pop(e):
+        page.views.pop()
+        top_view = page.views[-1]
+        page.go(top_view.route)
+
+    page.on_route_change = route_change
+    page.on_view_pop = view_pop
+
+    page.go(page.route)
 
 
 flet.app(target=main)
