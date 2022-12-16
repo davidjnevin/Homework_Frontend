@@ -28,9 +28,9 @@ from flet import (
     PopupMenuItem,
     colors,
     ButtonStyle,
+    icons,
 )
 
-from flet import icons
 from components.form_fields import FormFields
 from datetime import datetime
 from flet.radio import Radio
@@ -40,18 +40,22 @@ from views import RegisterView, LandingPageView, HealthCheckResultsView
 from utils.register import RegisterService
 from utils.login import LoginService
 from utils.healthcheck import HealthCheckService
+
+
 from content.home_content import HomeContent
 from content.login_content import LoginContent
+from content.footer_content import FooterContent
 
 APP_NAME = "Homework"
 
 
 home_content = HomeContent()
 login_content = LoginContent()
+footer_content = FooterContent()
 
 
 def main(page: Page):
-    page.title = "Homework"
+    page.title = f"{APP_NAME}"
     page.theme_mode = "light"
     page.splash = ProgressBar(visible=False)
     page.vertical_alignment = "start"
@@ -88,12 +92,14 @@ def main(page: Page):
             color={"": colors.WHITE, "selected": colors.WHITE},
         ),
     )
+
     page.appbar = AppBar(
         title=Text(f"{ APP_NAME }", color="white"),
         center_title=True,
         bgcolor=colors.DEEP_PURPLE,
         actions=[theme_icon_button],
     )
+
     page.add(
         Tabs(
             expand=True,
@@ -108,21 +114,7 @@ def main(page: Page):
         )
     )
 
-    page.add(
-        Row(
-            height=20,
-            vertical_alignment="end",
-            controls=[
-                Text(
-                    "Made with ❤ by @davidjnevin ",
-                    style="labelSmall",
-                    weight="bold",
-                    italic=True,
-                    color=colors.BLACK,
-                ),
-            ],
-        ),
-    )
+    page.add(footer_content)
 
 
 flet.app(target=main)
