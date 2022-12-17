@@ -1,3 +1,6 @@
 flet
 requests
 pydantic
+pytest
+pydantic[email]
+freezegun
