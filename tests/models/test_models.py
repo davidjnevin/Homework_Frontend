@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 from http import HTTPStatus
-from homework.models.login import LoginModel, UserInModel, UserOutModel
+from homework.models.users import LoginModel, UserInModel, UserOutModel
 from freezegun import freeze_time
 
 import pytest
