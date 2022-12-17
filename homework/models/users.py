@@ -1,14 +1,17 @@
-from pydantic import BaseModel, ValidatonError, validator, EmailStr
+from pydantic import UUID4, BaseModel, ValidationError, validator, EmailStr
 from datetime import datetime
 import re
+from dataclasses import dataclass
 
 
-class LoginModel(BaseModel):
+@dataclass
+class LoginModel:
     email: EmailStr
     password: str
 
 
-class UserInModel(BaseModel):
+@dataclass
+class UserInModel:
     email: EmailStr
     password: str
     first_name: str
@@ -16,7 +19,6 @@ class UserInModel(BaseModel):
     last_name_2: str
     description: str
     date_joined: datetime
-    is_staff: bool
     is_learner: bool
     is_guardian: bool
 
@@ -35,12 +37,14 @@ class UserInModel(BaseModel):
         return value
 
 
-class UserModel(BaseModel):
+@dataclass
+class UserOutModel:
+    id: UUID4
     email: EmailStr
     first_name: str
     last_name_1: str
     last_name_2: str
     description: str
-    is_staff: bool
+    date_joined: datetime
     is_learner: bool
     is_guardian: bool
