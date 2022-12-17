@@ -9,7 +9,7 @@ class LoginView:
         txt_email = TextField(label="Your Email")
         txt_password = TextField(label="Your Password")
 
-        login_response = Text(value="")
+        login_response = Text(value="Login Response")
 
         def login_btn_click(e):
             view.clean()
