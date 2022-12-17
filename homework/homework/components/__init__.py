@@ -1,1 +1,1 @@
-from .form_fields import FormFields  # noqa: F401
+from .form_fields import FormFields as FormFields  # noqa: F401

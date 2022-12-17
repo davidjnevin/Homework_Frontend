@@ -26,15 +26,15 @@ from flet import (
 )
 
 from flet import icons
-from components.form_fields import FormFields
+from homework.components import FormFields
 from datetime import datetime
 from flet.radio import Radio
 
 import requests
-from views import RegisterView, LandingPageView, HealthCheckResultsView
-from utils.register import RegisterService
-from utils.login import LoginService
-from utils.healthcheck import HealthCheckService
+from homework.views import RegisterView, LandingPageView, HealthCheckResultsView
+from homework.utils.register import RegisterService
+from homework.utils.login import LoginService
+from homework.utils.healthcheck import HealthCheckService
 
 
 def main(page: Page):

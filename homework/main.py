@@ -31,20 +31,13 @@ from flet import (
     icons,
 )
 
-from homework.components.form_fields import FormFields
-from datetime import datetime
-from flet.radio import Radio
 
-import requests
 from homework.views import (
     RegisterView,
     LandingPageView,
     HealthCheckResultsView,
     LoginView,
 )
-from homework.utils.register import RegisterService
-from homework.utils.login import LoginService
-from homework.utils.healthcheck import HealthCheckService
 
 from homework.views.views import PageViews as pgvs
 

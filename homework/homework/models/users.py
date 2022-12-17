@@ -1,4 +1,4 @@
-from pydantic import UUID4, BaseModel, ValidationError, validator, EmailStr
+from pydantic import UUID4, validator, EmailStr
 from datetime import datetime
 import re
 from dataclasses import dataclass
