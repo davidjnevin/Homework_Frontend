@@ -31,21 +31,19 @@ from flet import (
     icons,
 )
 
-from components.form_fields import FormFields
-from datetime import datetime
-from flet.radio import Radio
 
-import requests
-from views import RegisterView, LandingPageView, HealthCheckResultsView, LoginView
-from utils.register import RegisterService
-from utils.login import LoginService
-from utils.healthcheck import HealthCheckService
+from homework.views import (
+    RegisterView,
+    LandingPageView,
+    HealthCheckResultsView,
+    LoginView,
+)
 
-from views.views import PageViews as pgvs
+from homework.views.views import PageViews as pgvs
 
-from content.home_content import HomeContent
-from content.login_content import LoginContent
-from content.footer_content import FooterContent
+from homework.content.home_content import HomeContent
+from homework.content.login_content import LoginContent
+from homework.content.footer_content import FooterContent
 
 APP_NAME = "Homework"
 
@@ -120,7 +118,7 @@ def main(page: Page):
     def route_change(e):
         page.views.clear()
 
-        # First View is Login
+        # First View is landing page
         page.views.append(LandingPageView.landing_page_view(page))
 
         if page.route == "/register":
