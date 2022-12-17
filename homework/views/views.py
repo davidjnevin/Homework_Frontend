@@ -1,5 +1,3 @@
-import flet as ft
-
 from flet import TextField
 from flet import AppBar, ElevatedButton, Page, Text, View, colors
 
