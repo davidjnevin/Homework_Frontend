@@ -20,9 +20,9 @@ class LandingPageView:
         view = View(
             "/welcome",
             [
-                AppBar(title=Text("Welcome"), bgcolor=colors.SURFACE_VARIANT),
+                AppBar(title=Text("Homework Welcome"), bgcolor=colors.SURFACE_VARIANT),
                 ElevatedButton("Login", on_click=lambda _: page.go("/login")),
-                ElevatedButton("Register", on_click=lambda _: page.go("/register")),
+                # ElevatedButton("Register", on_click=lambda _: page.go("/register")),
             ],
         )
         return view
