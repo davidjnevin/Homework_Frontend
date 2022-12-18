@@ -12,7 +12,9 @@ def main(page):
                         ListTile(
                             leading=Icon(icons.ALBUM),
                             title=Text("The Enchanted Nightingale"),
-                            subtitle=Text("Music by Julie Gable. Lyrics by Sidney Stein."),
+                            subtitle=Text(
+                                "Music by Julie Gable. Lyrics by Sidney Stein."
+                            ),
                         ),
                         Row(
                             [TextButton("Buy tickets"), TextButton("Listen")],

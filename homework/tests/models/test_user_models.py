@@ -1,13 +1,11 @@
-from datetime import datetime, timedelta
-from http import HTTPStatus
-import ast
-from email_validator import EmailNotValidError, validate_email
-from pydantic import ValidationError
-from homework.models.users import UserLoginModel, UserInModel, UserOutModel
-from freezegun import freeze_time
+from datetime import datetime
 
 import pytest
+from email_validator import EmailNotValidError, validate_email
+from freezegun import freeze_time
 from hamcrest import assert_that, contains_string
+
+from homework.models import UserInModel, UserLoginModel, UserOutModel
 
 
 class TestUserModels:
@@ -75,8 +73,8 @@ class TestUserModels:
         assert sut.last_name_2 == "Kelly"
         assert sut.description == ""
         assert sut.date_joined == datetime.now()
-        assert sut.is_learner == True
-        assert sut.is_guardian == False
+        assert sut.is_learner is True
+        assert sut.is_guardian is False
 
     def test_user_out_model(self):
         id = "asdf"
@@ -108,5 +106,5 @@ class TestUserModels:
         assert sut.last_name_2 == "Kelly"
         assert sut.description == ""
         assert sut.date_joined == date_joined
-        assert sut.is_learner == True
-        assert sut.is_guardian == False
+        assert sut.is_learner is True
+        assert sut.is_guardian is False

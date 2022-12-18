@@ -16,7 +16,9 @@ def main(page: Page):
     page.title = "Drag and Drop example"
 
     def drag_will_accept(e):
-        e.control.content.border = border.all(2, colors.BLACK45 if e.data == "true" else colors.RED)
+        e.control.content.border = border.all(
+            2, colors.BLACK45 if e.data == "true" else colors.RED
+        )
         e.control.update()
 
     def drag_accept(e: DragTargetAcceptEvent):

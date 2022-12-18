@@ -1,40 +1,40 @@
 import gettext as gt
 import random
+from datetime import datetime
+
 import flet
+import requests
 from flet import (
-    Page,
-    RadioGroup,
-    Text,
-    View,
+    AppBar,
+    Card,
     Column,
     Container,
-    alignment,
-    border_radius,
-    json,
-    padding,
-    Row,
-    Card,
-    TextField,
     FilledButton,
-    SnackBar,
-    AppBar,
     Icon,
     IconButton,
+    Page,
     PopupMenuButton,
     PopupMenuItem,
+    RadioGroup,
+    Row,
+    SnackBar,
+    Text,
+    TextField,
+    View,
+    alignment,
+    border_radius,
     colors,
+    icons,
+    json,
+    padding,
 )
-
-from flet import icons
-from homework.components import FormFields
-from datetime import datetime
 from flet.radio import Radio
 
-import requests
-from homework.views import RegisterView, LandingPageView, HealthCheckResultsView
-from homework.utils.register import RegisterService
-from homework.utils.login import LoginService
+from homework.components import FormFields
 from homework.utils.healthcheck import HealthCheckService
+from homework.utils.login import LoginService
+from homework.utils.register import RegisterService
+from homework.views import HealthCheckResultsView, LandingPageView, RegisterView
 
 
 def main(page: Page):

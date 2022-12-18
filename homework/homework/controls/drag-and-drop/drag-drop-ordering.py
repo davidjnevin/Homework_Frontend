@@ -46,7 +46,9 @@ class ItemList:
                 content=Column(
                     [
                         self.item_name,
-                        TextButton("Add Item", icon=icons.ADD, on_click=self.add_item_handler),
+                        TextButton(
+                            "Add Item", icon=icons.ADD, on_click=self.add_item_handler
+                        ),
                         self.items,
                         self.end_indicator,
                     ],
@@ -74,9 +76,13 @@ class ItemList:
     ):
 
         controls_list = [x.controls[1] for x in self.items.controls]
-        to_index = controls_list.index(swap_control) if swap_control in controls_list else None
+        to_index = (
+            controls_list.index(swap_control) if swap_control in controls_list else None
+        )
         from_index = (
-            controls_list.index(chosen_control) if chosen_control in controls_list else None
+            controls_list.index(chosen_control)
+            if chosen_control in controls_list
+            else None
         )
         control_to_add = Column(
             [
@@ -107,7 +113,9 @@ class ItemList:
         # add new (drag from other list to end of this list, or use add item button)
         else:
             print("add new: ", item)
-            new_item = new_item = Item(self, item) if item else Item(self, self.item_name.value)
+            new_item = new_item = (
+                Item(self, item) if item else Item(self, self.item_name.value)
+            )
             control_to_add.controls.append(new_item.view)
             self.items.controls.append(control_to_add)
             self.item_name.value = ""

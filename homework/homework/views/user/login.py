@@ -1,9 +1,9 @@
-from flet import AppBar, ElevatedButton, Text, View, colors
-from homework.models.users import UserLoginModel
-
 from email_validator import EmailNotValidError, validate_email
+from flet import AppBar, ElevatedButton, Text, View, colors
+
 from homework.components import FormFields as ffs
 from homework.data import UserApiCalls as apicall
+from homework.models.users import UserLoginModel
 
 
 class LoginView:

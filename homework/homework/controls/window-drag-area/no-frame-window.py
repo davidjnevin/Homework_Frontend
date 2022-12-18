@@ -11,7 +11,9 @@ def main(page: Page):
             [
                 WindowDragArea(
                     Container(
-                        Text("Drag this area to move, maximize and restore application window."),
+                        Text(
+                            "Drag this area to move, maximize and restore application window."
+                        ),
                         bgcolor=colors.AMBER_300,
                         padding=10,
                     ),

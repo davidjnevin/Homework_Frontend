@@ -1,5 +1,5 @@
 import flet
-from flet import Container, Page, Row, Text, border, colors, KeyboardEvent
+from flet import Container, KeyboardEvent, Page, Row, Text, border, colors
 
 
 class ButtonControl(Container):

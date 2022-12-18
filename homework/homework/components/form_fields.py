@@ -1,4 +1,4 @@
-from flet import Container, TextField, RadioGroup, Radio, Row, Text, colors
+from flet import Container, Radio, RadioGroup, Row, Text, TextField, colors
 
 TEXT_SIZE = 14
 FIELD_WIDTH = 320

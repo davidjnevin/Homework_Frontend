@@ -1,26 +1,25 @@
 """ these are the modules needed"""
+from datetime import datetime
+
 import flet
+import requests
 from flet import (
-    Page,
-    Text,
-    View,
+    Card,
     Column,
     Container,
+    FilledButton,
     LinearGradient,
+    Page,
+    Row,
+    SnackBar,
+    Text,
+    TextField,
+    View,
     alignment,
     border_radius,
     json,
     padding,
-    Row,
-    Card,
-    TextField,
-    FilledButton,
-    SnackBar,
 )
-
-from datetime import datetime
-
-import requests
 
 
 def main(page: Page):

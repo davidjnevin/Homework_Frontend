@@ -55,7 +55,9 @@ def main(page: Page):
     page.add(
         Column(
             [
-                Text("Change the column height to see how child items wrap onto multiple columns:"),
+                Text(
+                    "Change the column height to see how child items wrap onto multiple columns:"
+                ),
                 width_slider,
             ]
         ),

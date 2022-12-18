@@ -1,6 +1,7 @@
 import requests
-from homework.settings import API_BASE_URL
+
 from homework.models.users import UserLoginModel
+from homework.settings import API_BASE_URL
 
 
 class UserApiCalls:

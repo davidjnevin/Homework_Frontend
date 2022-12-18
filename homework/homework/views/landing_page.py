@@ -1,17 +1,17 @@
 from flet import (
-    Text,
-    View,
+    AppBar,
+    Card,
     Column,
     Container,
+    ElevatedButton,
+    FilledButton,
+    Row,
+    Text,
+    View,
     alignment,
     border_radius,
-    padding,
-    Row,
-    Card,
-    FilledButton,
-    AppBar,
     colors,
-    ElevatedButton,
+    padding,
 )
 
 

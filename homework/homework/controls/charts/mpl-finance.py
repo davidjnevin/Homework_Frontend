@@ -1,8 +1,7 @@
+import flet
 import matplotlib
 import mplfinance as mpf
 import pandas as pd
-
-import flet
 from flet import Page
 from flet.matplotlib_chart import MatplotlibChart
 

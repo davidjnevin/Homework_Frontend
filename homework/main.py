@@ -1,49 +1,47 @@
 import gettext as gt
 import random
 import time
+
 import flet
 from flet import (
+    AppBar,
+    ButtonStyle,
+    Card,
+    Column,
+    Container,
+    FilledButton,
+    Icon,
+    IconButton,
     Page,
+    PopupMenuButton,
+    PopupMenuItem,
     ProgressBar,
     RadioGroup,
+    Row,
+    SnackBar,
     Tab,
     Tabs,
     Text,
+    TextField,
     View,
-    Column,
-    Container,
     alignment,
     border_radius,
+    colors,
+    icons,
     json,
     padding,
-    Row,
-    Card,
-    TextField,
-    FilledButton,
-    SnackBar,
-    AppBar,
-    Icon,
-    IconButton,
-    PopupMenuButton,
-    PopupMenuItem,
-    colors,
-    ButtonStyle,
-    icons,
 )
 
-
-from homework.views import (
-    RegisterView,
-    LandingPageView,
-    HealthCheckResultsView,
-    LoginView,
-)
-
-from homework.views.views import PageViews as pgvs
-
+from homework.content.footer_content import FooterContent
 from homework.content.home_content import HomeContent
 from homework.content.login_content import LoginContent
-from homework.content.footer_content import FooterContent
+from homework.views import (
+    HealthCheckResultsView,
+    LandingPageView,
+    LoginView,
+    RegisterView,
+)
+from homework.views.views import PageViews as pgvs
 
 APP_NAME = "Homework"
 

@@ -6,9 +6,13 @@ def main(page: Page):
 
     c1 = Container(width=50, height=50, bgcolor="red", animate_position=1000)
 
-    c2 = Container(width=50, height=50, bgcolor="green", top=60, left=0, animate_position=500)
+    c2 = Container(
+        width=50, height=50, bgcolor="green", top=60, left=0, animate_position=500
+    )
 
-    c3 = Container(width=50, height=50, bgcolor="blue", top=120, left=0, animate_position=1000)
+    c3 = Container(
+        width=50, height=50, bgcolor="blue", top=120, left=0, animate_position=1000
+    )
 
     def animate_container(e):
         c1.top = 20

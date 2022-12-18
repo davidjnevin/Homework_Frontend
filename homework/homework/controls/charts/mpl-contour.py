@@ -1,9 +1,8 @@
+import flet
 import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.tri as tri
 import numpy as np
-
-import flet
 from flet import Page
 from flet.matplotlib_chart import MatplotlibChart
 
@@ -49,7 +48,9 @@ def main(page: Page):
     fig.colorbar(cntr1, ax=ax1)
     ax1.plot(x, y, "ko", ms=3)
     ax1.set(xlim=(-2, 2), ylim=(-2, 2))
-    ax1.set_title("grid and contour (%d points, %d grid points)" % (npts, ngridx * ngridy))
+    ax1.set_title(
+        "grid and contour (%d points, %d grid points)" % (npts, ngridx * ngridy)
+    )
 
     # ----------
     # Tricontour

@@ -58,7 +58,9 @@ def main(page: Page):
                 selected_icon_content=Icon(icons.BOOKMARK),
                 label="Second",
             ),
-            NavigationRailDestination(icon=icons.SETTINGS, label_content=Text("Settings")),
+            NavigationRailDestination(
+                icon=icons.SETTINGS, label_content=Text("Settings")
+            ),
         ],
         on_change=dest_change,
     )

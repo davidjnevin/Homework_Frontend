@@ -11,7 +11,9 @@ def main(page):
     c1 = Switch(label="Unchecked switch", value=False)
     c2 = Switch(label="Checked switch", value=True)
     c3 = Switch(label="Disabled switch", disabled=True)
-    c4 = Switch(label="Switch with rendered label_position='left'", label_position="left")
+    c4 = Switch(
+        label="Switch with rendered label_position='left'", label_position="left"
+    )
     b = ElevatedButton(text="Submit", on_click=button_clicked)
     page.add(c1, c2, c3, c4, b, t)
 

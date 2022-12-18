@@ -10,7 +10,9 @@ def main(page):
     t = Text()
     page.add(
         Text("Slider with 'on_change' event:"),
-        Slider(min=0, max=100, divisions=10, label="{value}%", on_change=slider_changed),
+        Slider(
+            min=0, max=100, divisions=10, label="{value}%", on_change=slider_changed
+        ),
         t,
     )
 

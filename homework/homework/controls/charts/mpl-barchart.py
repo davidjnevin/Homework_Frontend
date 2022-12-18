@@ -1,7 +1,6 @@
+import flet
 import matplotlib
 import matplotlib.pyplot as plt
-
-import flet
 from flet import Page
 from flet.matplotlib_chart import MatplotlibChart
 

@@ -1,7 +1,8 @@
-from pydantic import UUID4, BaseModel, validator, EmailStr
-from datetime import datetime
 import re
 from dataclasses import dataclass
+from datetime import datetime
+
+from pydantic import UUID4, BaseModel, EmailStr, validator
 
 
 class UserLoginModel(BaseModel):

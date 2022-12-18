@@ -1,5 +1,6 @@
-import requests
 from datetime import datetime
+
+import requests
 
 
 class HealthCheckService:

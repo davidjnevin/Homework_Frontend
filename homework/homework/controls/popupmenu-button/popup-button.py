@@ -21,7 +21,9 @@ def main(page: Page):
                 on_click=lambda _: print("Button with a custom content clicked!"),
             ),
             PopupMenuItem(),  # divider
-            PopupMenuItem(text="Checked item", checked=False, on_click=check_item_clicked),
+            PopupMenuItem(
+                text="Checked item", checked=False, on_click=check_item_clicked
+            ),
         ]
     )
     page.add(pb)

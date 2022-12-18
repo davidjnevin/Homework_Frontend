@@ -126,7 +126,9 @@ def main(page: Page):
         page.launch_url(e.data)
 
     page.add(
-        ListView([Markdown(md1, on_tap_link=lambda e: page.launch_url(e.data))], expand=True),
+        ListView(
+            [Markdown(md1, on_tap_link=lambda e: page.launch_url(e.data))], expand=True
+        ),
         Divider(),
         ListView(
             [

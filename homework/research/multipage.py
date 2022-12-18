@@ -2,10 +2,9 @@ import time
 from math import pi
 
 import flet
-from flet import Column, Icon, Page, Row, Text, icons
-
 from controls.menus.collapsible import Collapsible
 from controls.menus.menu_button import MenuButton
+from flet import Column, Icon, Page, Row, Text, icons
 
 
 def main(page: Page):

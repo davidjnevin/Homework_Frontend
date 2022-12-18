@@ -17,7 +17,9 @@ def main(page: Page):
         tabs=[
             Tab(
                 text="Tab 1",
-                content=Container(content=Text("This is Tab 1"), alignment=alignment.center),
+                content=Container(
+                    content=Text("This is Tab 1"), alignment=alignment.center
+                ),
             ),
             Tab(
                 tab_content=Icon(icons.MESSAGE),

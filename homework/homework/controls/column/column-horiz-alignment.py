@@ -22,7 +22,9 @@ def main(page: Page):
             [
                 Text(align, size=16),
                 Container(
-                    content=Column(items(3), alignment="start", horizontal_alignment=align),
+                    content=Column(
+                        items(3), alignment="start", horizontal_alignment=align
+                    ),
                     bgcolor=colors.AMBER_100,
                     width=100,
                 ),

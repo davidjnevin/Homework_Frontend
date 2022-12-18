@@ -1,6 +1,5 @@
-import plotly.graph_objects as go
-
 import flet
+import plotly.graph_objects as go
 from flet import Page
 from flet.plotly_chart import PlotlyChart
 

@@ -1,5 +1,6 @@
 from http.client import HTTPResponse
-from flet import View, Text, Column, ElevatedButton
+
+from flet import Column, ElevatedButton, Text, View
 
 
 class HealthCheckResultsView:

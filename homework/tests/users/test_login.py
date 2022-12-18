@@ -1,7 +1,7 @@
-import pytest
 from http import HTTPStatus
+
+import pytest
 import requests
-from homework.settings import API_BASE_URL
 from hamcrest import (
     assert_that,
     contains_string,
@@ -11,6 +11,8 @@ from hamcrest import (
     is_,
     is_not,
 )
+
+from homework.settings import API_BASE_URL
 
 
 class TestLogin:

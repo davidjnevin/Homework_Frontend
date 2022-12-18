@@ -1,7 +1,7 @@
-import requests
 from datetime import datetime
-
 from random import random
+
+import requests
 
 
 class LoginService:

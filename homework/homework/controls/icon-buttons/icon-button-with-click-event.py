@@ -10,7 +10,9 @@ def main(page: Page):
         t.value = f"Button clicked {b.data} time(s)"
         page.update()
 
-    b = IconButton(icon=icons.PLAY_CIRCLE_FILL_OUTLINED, on_click=button_clicked, data=0)
+    b = IconButton(
+        icon=icons.PLAY_CIRCLE_FILL_OUTLINED, on_click=button_clicked, data=0
+    )
     t = Text()
 
     page.add(b, t)

@@ -1,9 +1,15 @@
 flet
 requests
 pydantic
-pytest
 pydantic[email]
 freezegun
 email-validator
+# testing
+pytest
 python-decouple
 pyhamcrest
+# Linters and more tools
+black
+isort
+flake8
+flake8-pydocstyle

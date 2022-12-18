@@ -52,7 +52,9 @@ def main(page: Page):
     page.add(
         Column(
             [
-                Text("Change the row width to see how child items wrap onto multiple rows:"),
+                Text(
+                    "Change the row width to see how child items wrap onto multiple rows:"
+                ),
                 width_slider,
             ]
         ),

@@ -1,4 +1,4 @@
-from flet import Text, UserControl, colors, Row
+from flet import Row, Text, UserControl, colors
 
 
 class FooterContent(UserControl):

@@ -5,7 +5,9 @@ from flet import AlertDialog, ElevatedButton, Page, Text, TextButton
 def main(page: Page):
     page.title = "AlertDialog examples"
 
-    dlg = AlertDialog(title=Text("Hello, you!"), on_dismiss=lambda e: print("Dialog dismissed!"))
+    dlg = AlertDialog(
+        title=Text("Hello, you!"), on_dismiss=lambda e: print("Dialog dismissed!")
+    )
 
     def close_dlg(e):
         dlg_modal.open = False

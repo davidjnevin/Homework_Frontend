@@ -1,6 +1,5 @@
-import plotly.express as px
-
 import flet
+import plotly.express as px
 from flet import Page
 from flet.plotly_chart import PlotlyChart
 

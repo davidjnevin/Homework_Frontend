@@ -31,7 +31,9 @@ def main(page: Page):
                 items=[
                     PopupMenuItem(text="Item 1"),
                     PopupMenuItem(),  # divider
-                    PopupMenuItem(text="Checked item", checked=False, on_click=check_item_clicked),
+                    PopupMenuItem(
+                        text="Checked item", checked=False, on_click=check_item_clicked
+                    ),
                 ]
             ),
         ],

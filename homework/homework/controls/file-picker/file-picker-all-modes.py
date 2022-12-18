@@ -46,7 +46,9 @@ def main(page: Page):
                 ElevatedButton(
                     "Pick files",
                     icon=icons.UPLOAD_FILE,
-                    on_click=lambda _: pick_files_dialog.pick_files(allow_multiple=True),
+                    on_click=lambda _: pick_files_dialog.pick_files(
+                        allow_multiple=True
+                    ),
                 ),
                 selected_files,
             ]

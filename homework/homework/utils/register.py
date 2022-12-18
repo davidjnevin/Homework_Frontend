@@ -1,7 +1,9 @@
-import requests
 from datetime import datetime
-from homework.models.users import UserInModel
 from random import random
+
+import requests
+
+from homework.models.users import UserInModel
 from homework.settings import API_BASE_URL
 
 BASE_URL = API_BASE_URL
