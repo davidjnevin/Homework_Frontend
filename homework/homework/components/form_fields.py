@@ -1,4 +1,4 @@
-from flet import TextField, RadioGroup, Radio, Row
+from flet import Container, TextField, RadioGroup, Radio, Row, Text, colors
 
 TEXT_SIZE = 14
 FIELD_WIDTH = 320
@@ -31,4 +31,14 @@ class FormFields:
             text_size=TEXT_SIZE,
             password=True,
             can_reveal_password=True,
+        )
+
+    def text_alert(text):
+        return Container(
+            content=Text(
+                size=TEXT_SIZE,
+                value=text,
+            ),
+            visible=False,
+            bgcolor=colors.RED,
         )

@@ -6,3 +6,4 @@ pydantic[email]
 freezegun
 email-validator
 python-decouple
+pyhamcrest

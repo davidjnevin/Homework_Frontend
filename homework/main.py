@@ -121,13 +121,14 @@ def main(page: Page):
         # First View is landing page
         page.views.append(LandingPageView.landing_page_view(page))
 
+        if page.route == "/login":
+            page.views.append(LoginView.login_view(e, page))
+
         if page.route == "/register":
             page.views.append(pgvs.register_view(e, page))
 
         if page.route == "/check_email":
             page.views.append(pgvs.check_email_view(e, page))
-        if page.route == "/login":
-            page.views.append(LoginView.login_view(e, page))
 
         # Main App View for Learners
         if page.route == "/learner":
