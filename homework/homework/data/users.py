@@ -7,9 +7,6 @@ class UserApiCalls:
     def login_user(user: UserLoginModel):
         client = requests.session()
         url = f"{API_BASE_URL}/api/users/login"
-        print(user.email)
-        print(user.password)
-        print(url)
         data = {
             "email": user.email,
             "password": user.password,
