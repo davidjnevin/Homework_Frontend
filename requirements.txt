@@ -4,4 +4,5 @@ pydantic
 pytest
 pydantic[email]
 freezegun
-decouple
+email-validator
+python-decouple
