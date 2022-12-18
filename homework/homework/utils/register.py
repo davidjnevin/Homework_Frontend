@@ -2,9 +2,9 @@ import requests
 from datetime import datetime
 from homework.models.users import UserInModel
 from random import random
-from homework.settings import settings
+from homework.settings import API_BASE_URL
 
-BASE_URL = settings.API_BASE_URL
+BASE_URL = API_BASE_URL
 
 
 class RegisterService:
