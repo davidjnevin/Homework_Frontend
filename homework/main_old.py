@@ -278,7 +278,6 @@ def main(page: Page):
         top_view = page.views[-1]
         page.go(top_view.route)
 
-    page.add(Row([menu]))
     page.on_route_change = route_change
     page.on_view_pop = view_pop
     page.go(page.route)

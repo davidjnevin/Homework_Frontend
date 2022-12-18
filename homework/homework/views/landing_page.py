@@ -3,6 +3,7 @@ from flet import (
     View,
     Column,
     Container,
+    alignment,
     border_radius,
     padding,
     Row,
@@ -21,8 +22,12 @@ class LandingPageView:
             "/welcome",
             [
                 AppBar(title=Text("Homework Welcome"), bgcolor=colors.SURFACE_VARIANT),
-                ElevatedButton("Login", on_click=lambda _: page.go("/login")),
-                # ElevatedButton("Register", on_click=lambda _: page.go("/register")),
+                Column(
+                    [
+                        ElevatedButton("Login", on_click=lambda _: page.go("/login")),
+                        # ElevatedButton("Register", on_click=lambda _: page.go("/register")),
+                    ]
+                ),
             ],
         )
         return view

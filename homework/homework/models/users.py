@@ -1,17 +1,29 @@
-from pydantic import UUID4, validator, EmailStr
+from pydantic import UUID4, BaseModel, ValidationError, validator, EmailStr
 from datetime import datetime
 import re
 from dataclasses import dataclass
 
+from email_validator import validate_email, EmailNotValidError
 
-@dataclass
-class LoginModel:
+
+class UserLoginModel(BaseModel):
     email: EmailStr
     password: str
 
+    # @validator("email")
+    # def login_email_validator(cls, email: str):
+    # try:
+    # validation = validate_email(email, check_deliverability=False)
 
-@dataclass
-class UserInModel:
+    # email = validation.email
+    # except Exception:
+    # print("validate_email exception: ", str(Exception))
+    # except ValidationError as e:
+    # raise EmailNotValidError
+    # return email
+
+
+class UserInModel(BaseModel):
     email: EmailStr
     password: str
     first_name: str
@@ -21,6 +33,15 @@ class UserInModel:
     date_joined: datetime
     is_learner: bool
     is_guardian: bool
+
+    @validator("email")
+    def user_in_email_validator(cls, value: str) -> str:
+        try:
+            validation = validate_email(value)
+            email = validation.value
+        except EmailNotValidError as e:
+            raise e
+        return email
 
     @validator("password")
     def password_validator(cls, value: str) -> str:
