@@ -2,16 +2,8 @@ from http import HTTPStatus
 
 import pytest
 import requests
-from hamcrest import (
-    assert_that,
-    contains_string,
-    empty,
-    equal_to,
-    has_length,
-    is_,
-    is_not,
-)
-
+from hamcrest import (assert_that, contains_string, empty, equal_to,
+                      has_length, is_, is_not)
 from homework.settings import API_BASE_URL
 
 
@@ -52,3 +44,20 @@ class TestLogin:
 
         assert_that(client.cookies, is_not(empty()))
         assert_that(response.status_code, equal_to(HTTPStatus.OK))
+
+    def test_bad_connection(self):
+        # TODO add create user/ UserBuilder or mock for this test
+
+        email = "content@davidjnevin.com"
+        password = "Password10!"
+
+        client = requests.session()
+        bad_url = "http://localhost/"
+        data = {
+            "email": email,
+            "password": password,
+        }
+        assert_that(client.cookies, empty())
+        with pytest.raises(Exception) as error:
+            response = client.post(bad_url, json=data, headers={"accept": "*/*"})
+        assert_that(str(error), contains_string("Failed to establish a new connection"))
