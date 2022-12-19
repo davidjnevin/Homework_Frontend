@@ -4,7 +4,6 @@ import pytest
 from email_validator import EmailNotValidError, validate_email
 from freezegun import freeze_time
 from hamcrest import assert_that, contains_string
-
 from homework.models import UserInModel, UserLoginModel, UserOutModel
 
 
