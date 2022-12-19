@@ -1,46 +1,18 @@
 import gettext as gt
-import random
 import time
 
 import flet
-from flet import (
-    AppBar,
-    ButtonStyle,
-    Card,
-    Column,
-    Container,
-    FilledButton,
-    Icon,
-    IconButton,
-    Page,
-    PopupMenuButton,
-    PopupMenuItem,
-    ProgressBar,
-    RadioGroup,
-    Row,
-    SnackBar,
-    Tab,
-    Tabs,
-    Text,
-    TextField,
-    View,
-    alignment,
-    border_radius,
-    colors,
-    icons,
-    json,
-    padding,
-)
+from flet import (WEB_BROWSER, AppBar, ButtonStyle, Card, Column, Container,
+                  FilledButton, Icon, IconButton, Page, PopupMenuButton,
+                  PopupMenuItem, ProgressBar, RadioGroup, Row, SnackBar, Tab,
+                  Tabs, Text, TextField, View, alignment, border_radius,
+                  colors, icons, json, padding)
 
 from homework.content.footer_content import FooterContent
 from homework.content.home_content import HomeContent
 from homework.content.login_content import LoginContent
-from homework.views import (
-    HealthCheckResultsView,
-    LandingPageView,
-    LoginView,
-    RegisterView,
-)
+from homework.views import (HealthCheckResultsView, LandingPageView, LoginView,
+                            RegisterView)
 from homework.views.views import PageViews as pgvs
 
 APP_NAME = "Homework"
@@ -149,4 +121,4 @@ def main(page: Page):
     page.go(page.route)
 
 
-flet.app(target=main)
+flet.app(target=main, port=8850, view=WEB_BROWSER, web_renderer="html")
