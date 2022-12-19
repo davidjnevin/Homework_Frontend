@@ -13,3 +13,4 @@ black
 isort
 flake8
 flake8-pydocstyle
+selenium==4.7.2
